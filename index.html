@@ -145,7 +145,8 @@
             displayMassage.addEventListener("click", function () {
                 const FirstClassTicketCount = getInputValue('firstClass');
                 const economyClassTicketCount = getInputValue('economyClass');
-                alert(FirstClassTicketCount + " First Class Ticket and " + economyClassTicketCount + " Economic Class Tickets only");
+                const grandTotal  = totalTicketCalculate();
+                alert(FirstClassTicketCount + " First Class Ticket and " + economyClassTicketCount + " Economic Class Tickets " + grandTotal +" Taka With VAT only" );
 
             });
 
@@ -189,7 +190,7 @@
 
                 const grandTotal = totalTicketPrice + vat;
                 document.getElementById("grandTotal").innerText = '$' + grandTotal;
-
+                return grandTotal;
             };
 
             // function for parse input
