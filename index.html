@@ -151,7 +151,7 @@
 
             //function for calculate ticket onclick  
             function handelTicketChange(ticket, isIncrease) {
-                // const ticketCount = document.getElementById(ticket + "Count").value;
+                
                 const ticketParseCount = getInputValue(ticket);
 
                 let ticketNewCount = ticketParseCount;
@@ -162,7 +162,7 @@
                     ticketNewCount = ticketParseCount - 1;
                 }
                 document.getElementById(ticket + 'Count').value = ticketNewCount;
-                // const totalEconomyClassPrice = newEconomyOfCount * 100;
+               
                 let ticketTotal = 0;
                 if (ticket == "firstClass") {
                     ticketTotal = ticketNewCount * 150;
@@ -194,7 +194,7 @@
 
             // function for parse input
             function getInputValue(ticket) {
-                // console.log(ticket);
+                
                 const ticketInput = document.getElementById(ticket + 'Count').value;
                 const ticketCount = parseInt(ticketInput);
                 return ticketCount;
